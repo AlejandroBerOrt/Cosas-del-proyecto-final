@@ -1,0 +1,110 @@
+<div id="bigDiv">
+  <div>
+    @if (!base64Image1){
+        <div class="center">
+          <ngx-file-drop dropZoneClassName="innercenter" dropZoneLabel="Drop files here" (onFileDrop)="dropped($event, 1)" 
+          (onFileOver)="fileOver($event)" (onFileLeave)="fileLeave($event)">
+              <ng-template ngx-file-drop-content-tmp let-openFileSelector="openFileSelector">
+                Suelta una imágen o
+                <button type="button" (click)="openFileSelector()">busca una imágen</button>
+              </ng-template>
+          </ngx-file-drop>
+        </div>
+    }
+    @else if (base64Image1){
+      <div>
+        <img [src]="base64Image1" alt="Uploaded Image" width="250px" height="250px">
+        <button (click)="deleteImage(1)">X</button>
+      </div>
+    }
+  </div>
+  <div>
+    @if (!base64Image2){
+        <div class="center">
+          <ngx-file-drop dropZoneClassName="innercenter" dropZoneLabel="Drop files here" (onFileDrop)="dropped($event, 2)" 
+          (onFileOver)="fileOver($event)" (onFileLeave)="fileLeave($event)">
+              <ng-template ngx-file-drop-content-tmp let-openFileSelector="openFileSelector">
+                Suelta una imágen o
+                <button type="button" (click)="openFileSelector()">busca una imágen</button>
+              </ng-template>
+          </ngx-file-drop>
+        </div>
+    }
+    @else if (base64Image2){
+      <div>
+        <img [src]="base64Image2" alt="Uploaded Image" width="250px" height="250px">
+        <button (click)="deleteImage(2)">X</button>
+      </div>
+    }
+  </div>
+  <div>
+    @if (!base64Image3){
+        <div class="center">
+          <ngx-file-drop dropZoneClassName="innercenter" dropZoneLabel="Drop files here" (onFileDrop)="dropped($event, 3)" 
+          (onFileOver)="fileOver($event)" (onFileLeave)="fileLeave($event)">
+              <ng-template ngx-file-drop-content-tmp let-openFileSelector="openFileSelector">
+                Suelta una imágen o
+                <button type="button" (click)="openFileSelector()">busca una imágen</button>
+              </ng-template>
+          </ngx-file-drop>
+        </div>
+    }
+    @else if (base64Image3){
+      <div>
+        <img [src]="base64Image3" alt="Uploaded Image" width="250px" height="250px">
+        <button (click)="deleteImage(3)">X</button>
+      </div>
+    }
+  </div>
+  <div>
+    @if (!base64Image4){
+        <div class="center">
+          <ngx-file-drop dropZoneClassName="innercenter" dropZoneLabel="Drop files here" (onFileDrop)="dropped($event, 4)" 
+          (onFileOver)="fileOver($event)" (onFileLeave)="fileLeave($event)">
+              <ng-template ngx-file-drop-content-tmp let-openFileSelector="openFileSelector">
+                Suelta una imágen o
+                <button type="button" (click)="openFileSelector()">busca una imágen</button>
+              </ng-template>
+          </ngx-file-drop>
+        </div>
+    }
+    @else if (base64Image4){
+      <div>
+        <img [src]="base64Image4" alt="Uploaded Image" width="250px" height="250px">
+        <button (click)="deleteImage(4)">X</button>
+      </div>
+    }
+  </div>
+  <div>
+    @if (!base64Image5){
+        <div class="center">
+          <ngx-file-drop dropZoneClassName="innercenter" dropZoneLabel="Drop files here" (onFileDrop)="dropped($event, 5)" 
+          (onFileOver)="fileOver($event)" (onFileLeave)="fileLeave($event)">
+              <ng-template ngx-file-drop-content-tmp let-openFileSelector="openFileSelector">
+                Suelta una imágen o
+                <button type="button" (click)="openFileSelector()">busca una imágen</button>
+              </ng-template>
+          </ngx-file-drop>
+        </div>
+    }
+    @else if (base64Image5){
+      <div>
+        <img [src]="base64Image5" alt="Uploaded Image" width="250px" height="250px">
+        <button (click)="deleteImage(5)">X</button>
+      </div>
+    }
+  </div>
+</div>
+
+<div class="center">
+  <ngx-file-drop dropZoneClassName="innercenter" dropZoneLabel="Drop files here" (onFileDrop)="dropped($event, 6)" 
+  (onFileOver)="fileOver($event)" (onFileLeave)="fileLeave($event)">
+      <ng-template ngx-file-drop-content-tmp let-openFileSelector="openFileSelector">
+        <img src="..\assets\Edit.png" width="36" height="36px">
+        <img class="imagen" [src]="base64Image6" alt="Uploaded Image" width="250px" height="250px" (click)="openFileSelector()">
+      </ng-template>
+  </ngx-file-drop>
+</div>
+
+
+

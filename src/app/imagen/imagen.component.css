@@ -1,0 +1,23 @@
+.center {
+    height: 250px;
+    width: 250px;
+}
+
+#bigDiv {
+    display: flex;
+}
+
+#bigDiv div {
+    display: flex;
+    flex-direction: column;
+}
+
+.imagen {
+    position: absolute;
+    left: 0;
+}
+
+.imagen:hover {
+    opacity: 0.25;
+    cursor: pointer;
+}

@@ -1,0 +1,61 @@
+<div> 
+    <mat-button-toggle-group #toggleBtn="matButtonToggleGroup" value="Toggle Button 1"> 
+        <mat-button-toggle value="Toggle Button 1"> 
+            Toggle Button 1 
+        </mat-button-toggle> 
+        <mat-button-toggle value="Toggle Button 2"> 
+            Toggle Button 2 
+        </mat-button-toggle> 
+    </mat-button-toggle-group> 
+  </div>
+  <mat-paginator [length]="100" [pageSize]="10" [pageSizeOptions]="[3, 5, 10, 25, 100]" aria-label="Select page">
+  </mat-paginator>
+  @if (toggleBtn.value == "Toggle Button 1") {
+    <table id="container">
+      @for (game of dataObs$ | async; track $index) {
+        <tr class="example-card2">
+          <td>
+            <img mat-card-image [src]="game.img" [alt]="game.nombre">
+            <mat-card>
+              <mat-card-header>
+                <mat-card-title>{{game.nombre}}</mat-card-title>
+                <mat-card-subtitle>{{game.dev}}</mat-card-subtitle>
+              </mat-card-header>
+              <span class="example-spacer"></span>
+              <mat-card-content>
+                <mat-chip-listbox>
+                  @for (tag of game.tags.split(","); track $index) {
+                    <mat-chip disabled>{{tag}}</mat-chip>
+                  }
+                </mat-chip-listbox>
+              </mat-card-content>
+            </mat-card>
+          </td>
+        </tr>
+      }
+    </table>
+  }
+  @else if (toggleBtn.value == "Toggle Button 2") {
+    <table id="container2">
+      <div id="containerVert">
+        @for (game of dataObs$ | async; track $index) {
+          <td>
+            <mat-card class="example-card">
+              <img [src]="game.img" [alt]="game.nombre">
+              <mat-card-header>
+                <mat-card-title>{{game.nombre}}</mat-card-title>
+                <mat-card-subtitle>{{game.dev}}</mat-card-subtitle>
+              </mat-card-header>
+              <mat-card-content>
+                <mat-chip-listbox>
+                  @for (tag of game.tags.split(","); track $index) {
+                    <mat-chip disabled>{{tag}}</mat-chip>
+                  }
+                </mat-chip-listbox>
+              </mat-card-content>
+            </mat-card>
+          </td>
+        }
+      </div>
+    </table>
+  }

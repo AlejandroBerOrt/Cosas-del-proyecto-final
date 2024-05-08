@@ -1,0 +1,84 @@
+#container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+#container td {
+    display: flex;
+    width: 90%;
+}
+
+#container2 {
+    display: flex;
+    justify-content: flex-end;
+}
+
+#containerVert {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 65%;
+}
+
+.example-spacer {
+    flex: 1 1 auto;
+}
+
+.example-card2 {
+    display: flex;
+    flex-direction: row;
+    width: 50%;
+    margin: 4px;
+}
+
+.example-card {
+    max-width: 275px;
+    margin: 4px;
+}
+
+mat-card {
+    width: 100%;
+    background-color: rgb(202, 202, 202);
+}
+
+mat-card-subtitle { 
+    margin-bottom: 4px;
+    color: black;
+}
+
+.mat-mdc-standard-chip {
+    --mdc-chip-disabled-label-text-color: #000;
+    --mdc-chip-elevated-disabled-container-color: rgb(170, 170, 170);
+    --mat-chip-disabled-container-opacity: 1;
+}
+
+#containerVert mat-chip-listbox {
+    margin-top: 1em;
+}
+
+.example-card2 img {
+    width: 150px;
+}
+
+hr {
+    background-color: #000;
+    color: #000;
+}
+
+.mat-mdc-card-content:last-child {
+    padding-bottom: 8px;
+}
+
+mat-chip {
+    color: red;
+}
+
+.tags button {
+    padding: 0px 4px;
+    letter-spacing: normal;
+    font-size: 12px;
+    color: black;
+    margin: 0 4px;
+    border-radius: 10%;
+}

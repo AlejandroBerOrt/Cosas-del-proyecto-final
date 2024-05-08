@@ -1,0 +1,19 @@
+#perfil {
+    height: 35%;
+}
+
+.liGame {
+    display: flex;
+    margin: 8px;
+    background-color: bisque;
+}
+
+.liGame img {
+    max-width: 65px;
+    max-height: 65px;
+    margin-right: 4px;
+}
+
+.full {
+    color: gold;
+}

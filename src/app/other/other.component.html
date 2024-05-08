@@ -1,0 +1,32 @@
+<table>
+    <thead>
+      <tr>
+        <th>position</th>
+        <th>name</th>
+        <th>weight</th>
+        <th>symbol</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let data of dataObs$ | async">
+        <td>
+          {{ data.position }}
+        </td>
+        <td>
+          {{ data.name }}
+        </td>
+        <td>
+          {{ data.weight }}
+        </td>
+        <td>
+          {{ data.symbol }}
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  
+  <mat-paginator
+    [pageSizeOptions]="[5, 10, 25, 100]"
+    [pageSize]="5"
+  ></mat-paginator>
+  
